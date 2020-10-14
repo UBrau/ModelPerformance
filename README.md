@@ -48,7 +48,7 @@ This function is invoked mainly for generating a precision-recall plot. If `addI
 
 
 ## Usage
-Example input is provided as an R archive (to be `load()`ed).
+Example input is provided:
 ``` R
 dat <- read.delim("ExampleData.tab")
 source("ROC.PRC.R")
