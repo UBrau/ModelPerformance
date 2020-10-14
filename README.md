@@ -50,7 +50,11 @@ This function is invoked mainly for generating a precision-recall plot. If `addI
 ## Usage
 Example input is provided as an R archive (to be `load()`ed).
 ``` R
-myrates <- getAUC(truth, prediction, returnRates=T, seed=123)
-plotROC(auc=myrates, main="ROC", addInfo=TRUE)
-plotPRC(auc=myrates, main="PRC", addInfo=TRUE)
+dat <- read.delim("ExampleData.tab")
+source("ROC.PRC.R")
+
+rates <- getAUC(dat$status, dat$viralReads, returnRates=T, seed=123)
+par(mfrow=c(1,2))
+plotROC(rates, main="ROC", addInfo=T)
+plotPRC(rates, main="PRC", addInfo=T)
 ```
