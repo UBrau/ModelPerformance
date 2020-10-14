@@ -117,7 +117,7 @@ plotPRC <- function(auc, main="", addInfo=FALSE) {
              caption
              )
         
-        return(auc$rates[whichOpt,])
+        return(c(auc$rates[whichOpt,], F1score=f1score[whichOpt]))
     }
 }
 
